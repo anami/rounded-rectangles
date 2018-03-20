@@ -1,8 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+const copyWebpackPlugin = require('copy-webpack-plugin')
 
-const ROOT = path.resolve( __dirname, 'src' );
-const DESTINATION = path.resolve( __dirname, 'dist' );
+const ROOT = path.resolve(__dirname, 'src');
+const DESTINATION = path.resolve(__dirname, 'dist');
 
 module.exports = {
     context: ROOT,
@@ -10,7 +11,7 @@ module.exports = {
     entry: {
         'main': './main.ts'
     },
-    
+
     output: {
         filename: '[name].bundle.js',
         path: DESTINATION
@@ -27,8 +28,8 @@ module.exports = {
     module: {
         rules: [
             /****************
-            * PRE-LOADERS
-            *****************/
+             * PRE-LOADERS
+             *****************/
             {
                 enforce: 'pre',
                 test: /\.js$/,
@@ -42,17 +43,23 @@ module.exports = {
             },
 
             /****************
-            * LOADERS
-            *****************/
+             * LOADERS
+             *****************/
             {
                 test: /\.ts$/,
-                exclude: [ /node_modules/ ],
+                exclude: [/node_modules/],
                 use: 'awesome-typescript-loader'
             }
         ]
     },
 
+    plugins: [
+        new copyWebpackPlugin([{
+            from: 'index.html',
+            to: 'index.html'
+        }])
+    ],
+
     devtool: 'cheap-module-source-map',
     devServer: {}
 };
-
