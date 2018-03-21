@@ -68,6 +68,7 @@ class RoundedRectangleApplication implements IRoundedRectangleApplication {
         // attach touchmove event
         document.addEventListener('touchmove', (event: TouchEvent) => {
             this.onMouseMove(event.touches[0].pageX, event.touches[0].pageY);
+            event.preventDefault();
         });
 
         // attach mousedown event
@@ -77,6 +78,7 @@ class RoundedRectangleApplication implements IRoundedRectangleApplication {
         // attach touchstart event
         document.addEventListener('touchstart', (event: TouchEvent) => {
             this.onMouseDown(event.touches[0].pageX, event.touches[0].pageY);
+            event.preventDefault();
         });
 
         // attach mouseup event
@@ -86,6 +88,7 @@ class RoundedRectangleApplication implements IRoundedRectangleApplication {
         // attach touchend event
         document.addEventListener('touchend', (event: TouchEvent) => {
             this.onMouseUp(event.touches[0].pageX, event.touches[0].pageY);
+            event.preventDefault();
         });
 
         // setting canvas object size
