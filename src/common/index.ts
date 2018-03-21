@@ -7,4 +7,4 @@ export {
 export {
     IRectangleActionPointer,
     RectangleActionPointer
-} from './rectangleCornerPoint.model';
+} from './rectangleActionPointer.model';
