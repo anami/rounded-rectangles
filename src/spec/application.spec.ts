@@ -18,18 +18,15 @@ describe('Rounded Rectangles test', () => {
         }).toEqual(rect.toJSON());
     });
 
-    it('Test #2: check editing a rectangle', () => {
+    it('Test #2: get an existing rectangle', () => {
         var rect = application.getRectById(2);
-        rect.setSize(50, 100);
-        rect.setPosition(1, 1);
-        rect.setCornerRadius(15);
         expect({
             id: 2,
-            width: 50,
-            height: 100,
-            x: 1,
-            y: 1,
-            radius: 15
+            x: 150,
+            y: 400,
+            width: 250,
+            height: 150,
+            radius: 20
         }).toEqual(rect.toJSON());
     });
 });

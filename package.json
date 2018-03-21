@@ -1,7 +1,7 @@
 {
   "name": "rounded-rectangles",
   "version": "0.0.1",
-  "description": "A simple Webpack 2 application with TypeScript transpilation",
+  "description": "Rounded Rectangles",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --port 9000 --inline --progress --profile --colors --watch --content-base src/",
@@ -14,13 +14,17 @@
     "webpack2",
     "typescript"
   ],
-  "author": "Juri Strumpflohner",
+  "author": "Alexander Matlin",
   "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
   "devDependencies": {
     "@types/jasmine": "2.5.40",
     "@types/node": "7.0.0",
     "awesome-typescript-loader": "3.0.0-beta.18",
     "copy-webpack-plugin": "^4.5.1",
+    "http-server": "^0.11.1",
     "jasmine-core": "2.5.2",
     "karma": "1.4.0",
     "karma-jasmine": "1.1.0",
@@ -32,5 +36,8 @@
     "typescript": "2.1.5",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.2.1"
+  },
+  "engines": {
+    "node": "8.9.4"
   }
 }
