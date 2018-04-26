@@ -127,7 +127,7 @@ class Rectangle implements IRectangleExtended {
             this.x + this.width / 2,
             this.y + this.height / 2,
             cornerPoinerRadius,
-            (deltaX, deltaY) => {
+            (deltaX: number, deltaY: number) => {
                 this.setPosition(this.x + deltaX, this.y + deltaY);
                 this.cornerPoints.forEach((point) => {
                     point.x = point.x + deltaX;
