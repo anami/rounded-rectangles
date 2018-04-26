@@ -150,7 +150,7 @@ class Rectangle implements IRectangleExtended {
                 }
             }));
 
-        // creating and setting ri top point for changing rectangle's corners radius
+        // creating and setting right top point for changing rectangle's corners radius
         this.cornerPoints.push(new RectangleActionPointer(
             this.x + this.width - cornerPoinerRadius / 2,
             this.y + cornerPoinerRadius / 2,
