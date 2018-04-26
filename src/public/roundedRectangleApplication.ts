@@ -108,7 +108,6 @@ class RoundedRectangleApplication implements IRoundedRectangleApplication {
         this.rectangles.sort(rect => {
             return (rect.drag) ? 1 : 0;
         }).forEach((rect) => {
-            console.log(rect.drag);
             rect.render(this.canvasContext);
         });
     }
